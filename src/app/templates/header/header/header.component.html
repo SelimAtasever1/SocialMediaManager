@@ -1,0 +1,61 @@
+<div class="container mt-5">
+    <nav class="navbar navbar-expand-lg p-0">
+        <div class="col-10 col-lg-2">
+            <app-logo></app-logo>
+        </div>
+
+        <div class="col-2 d-lg-none p-0">
+            <button class="navbar-toggler ml-auto" type="button" (click)="toggleMenu()" aria-controls="navbarContent" [attr.aria-expanded]="isMenuOpen" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <div [class.collapse]="!isMenuOpen" class="navbar-collapse" id="navbarContent">
+            <div class="d-lg-none">
+                <a href="#" class="nav-item d-block py-1"><p>Hakkımızda</p></a>
+                <a href="#" class="nav-item d-block py-1"><p>Jüri - Yarışma Yazılımı</p></a>
+                <a href="#" class="nav-item d-block py-1"><p>Word Ninja</p></a>
+                <a href="#" class="nav-item d-block py-1"><p>Word Pyramids</p></a>
+            </div>
+
+            <div class="row d-lg-none mt-2">
+                <div class="col-12 d-flex justify-content-around">
+                    <app-icon iconClass="fa fa-youtube"></app-icon>
+                    <app-icon iconClass="fa fa-instagram"></app-icon>
+                    <app-icon iconClass="fa fa-behance"></app-icon>
+                    <app-icon iconClass="fa fa-linkedin"></app-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-8 d-none d-lg-flex align-items-center">
+            <div class="col-3">
+                <a href="#" class="nav-item"><p>Hakkımızda</p></a>
+            </div>
+            <div class="col-3">
+                <a href="#" class="nav-item"><p>Jüri - Yarışma Yazılımı</p></a>
+            </div>
+            <div class="col-3">
+                <a href="#" class="nav-item"><p>Word Ninja</p></a>
+            </div>
+            <div class="col-3">
+                <a href="#" class="nav-item"><p>Word Pyramids</p></a>
+            </div>
+        </div>
+
+        <div class="col-2 d-none d-lg-flex">
+            <div class="col-3">
+                <app-icon iconClass="fa fa-youtube"></app-icon>
+            </div>
+            <div class="col-3">
+                <app-icon iconClass="fa fa-instagram"></app-icon>
+            </div>
+            <div class="col-3">
+                <app-icon iconClass="fa fa-behance"></app-icon>
+            </div>
+            <div class="col-3">
+                <app-icon iconClass="fa fa-linkedin"></app-icon>
+            </div>
+        </div>
+    </nav>
+</div>

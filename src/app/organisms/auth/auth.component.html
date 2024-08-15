@@ -1,0 +1,30 @@
+<div class="container auth-container">
+    <div class="row justify-content-center w-100">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Login</h2>
+                    <form (ngSubmit)="onLogin()">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username:</label>
+                            <input type="text" id="username" class="form-control" [(ngModel)]="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password:</label>
+                            <input type="password" id="password" class="form-control" [(ngModel)]="password" name="password" required>
+                        </div>
+
+                        <app-button
+                            type="submit"
+                            appearance="primary"
+                            size="m"
+                            [disabled]="!username || !password">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i> Login
+                        </app-button>
+                    </form>
+                    <p *ngIf="errorMessage" class="text-danger mt-3">{{ errorMessage }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

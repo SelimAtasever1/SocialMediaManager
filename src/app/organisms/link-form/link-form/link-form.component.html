@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <ng-template #content let-context>
+          <tui-input
+            class="tui-space_bottom-3 input-style first-input"
+            #linkInput="ngModel"
+            [(ngModel)]="socialMediaLink"
+            (ngModelChange)="onModelChange($event)"
+            required
+            appValidateSocialMedia  
+            [ngClass]="{'ng-invalid-ng-touched': !linkInput.valid && linkInput.touched}"
+          >
+            Sosyal Medya Linki
+            <span class="tui-required"></span>
+          </tui-input>
+  
+          <tui-input
+            class="tui-space_bottom-3 input-style"
+            #nameInput="ngModel"
+            [(ngModel)]="platformName"
+            (ngModelChange)="onModelChange($event)"
+            required
+            [ngClass]="{'ng-invalid-ng-touched': !nameInput.valid && nameInput.touched}"
+          >
+            Sosyal Medya Adı 
+            <span class="tui-required"></span>
+          </tui-input>
+  
+          <tui-input
+            class="tui-space_bottom-3 input-style"
+            #nameDescription="ngModel"
+            [(ngModel)]="description"
+            (ngModelChange)="onModelChange($event)"
+            required
+            [ngClass]="{'ng-invalid-ng-touched': !nameDescription.valid && nameDescription.touched}"
+          >
+            Açıklama
+            <span class="tui-required"></span>
+          </tui-input>
+  
+          <div class="container">
+            <div class="row justify-content-end">
+              <div class="col-3">
+                <app-button
+                  appearance="primary"
+                  size="l"
+                  (click)="addNewLink()">
+                  {{ isEditMode ? 'Güncelle' : 'Kaydet' }}
+                </app-button>
+              </div>
+              <div class="col-3">
+                <app-button
+                  size="l"
+                  appearance="secondary-destructive"
+                  (click)="closeDialog()">
+                  Vazgeç
+                </app-button>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  

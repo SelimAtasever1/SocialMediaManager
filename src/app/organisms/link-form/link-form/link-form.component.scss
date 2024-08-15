@@ -1,0 +1,30 @@
+
+[tuiButton][appearance="custom"] {
+    background: linear-gradient(45deg, #a381ff, #bc71c9);
+    color: #fff;
+
+    &:hover {
+        background: linear-gradient(45deg, #8f75d1, #a381ff);
+    }
+
+    &:active {
+        background: #8f75d1;
+    }
+
+    &:disabled {
+        background: #eaecee;
+    }
+}
+
+
+.input-style {
+    margin-bottom: 2rem;
+}
+
+.first-input {
+    margin-top: 2rem;
+}
+
+.ng-invalid-ng-touched {
+    border: 1.4px solid red !important; 
+}

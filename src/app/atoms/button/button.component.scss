@@ -1,0 +1,85 @@
+.btn {
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  outline: none;
+
+  &.custom {
+    background: linear-gradient(45deg, #a381ff, #bc71c9);
+    color: #fff;
+
+    &:hover {
+      background: linear-gradient(45deg, #8f75d1, #a381ff);
+    }
+
+    &:active {
+      background: #8f75d1;
+    }
+
+    &:disabled {
+      background: #eaecee;
+      color: #a0a0a0;
+      cursor: not-allowed;
+    }
+  }
+
+  &.primary {
+    background: #3983f3;
+    color: #fff;
+    width: 100%;
+
+    &:hover {
+      background: #0052cc;
+    }
+
+    &:active {
+      background: #0044b3;
+    }
+
+    &:disabled {
+      background: rgb(233, 244, 255);
+      color: #fb7373;
+      cursor: not-allowed;
+    }
+  }
+
+  &.secondary-destructive {
+    background: #dc3545;
+    color: #fff;
+
+    &:hover {
+      background: #c82333;
+    }
+
+    &:active {
+      background: #bd2130;
+    }
+
+    &:disabled {
+      background: #eaecee;
+      color: #a0a0a0;
+      cursor: not-allowed;
+    }
+  }
+
+  &.s {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  &.m {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  &.l {
+    font-size: 1.15rem;
+    padding: 0.75rem 1.5rem;
+  }
+}

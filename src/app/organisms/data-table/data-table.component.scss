@@ -1,0 +1,29 @@
+.no-background-button {
+    background-color: transparent !important; 
+    box-shadow: none !important; 
+    border: none !important; 
+    padding: 0; 
+    margin: 0; 
+    color: #000; 
+}
+
+.edit-button {
+    color: #4a90e2; 
+}
+
+.delete-button {
+    color: #e94e77; 
+}
+
+.no-background-button:hover {
+    background-color: transparent !important; 
+    box-shadow: none !important; 
+}
+
+.edit-button:hover {
+    color: #357abd; 
+}
+
+.delete-button:hover {
+    color: #c92d4c; 
+}

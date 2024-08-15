@@ -1,0 +1,19 @@
+<tui-root>
+    <ng-container *ngIf="isAuthenticated$ | async">
+
+        <app-header></app-header>
+
+        <div class="container mt-4">
+            <app-link-form #linkFormComponent></app-link-form>
+        
+            <app-button size="m" appearance="custom" (click)="linkFormComponent.onClick()">
+                <i class="fa fa-plus" style="margin-right: 1rem;"></i>
+                <span style="font-weight: bold;">Yeni Hesap Ekle</span>
+            </app-button>
+        </div>
+    </ng-container>
+
+    <div class="col-12 mt-5">
+        <router-outlet></router-outlet>
+    </div>
+</tui-root>

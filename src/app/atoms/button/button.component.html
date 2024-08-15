@@ -1,0 +1,9 @@
+<button
+    [attr.type]="type"
+    [ngClass]="['btn', appearance, size]"
+    [disabled]="disabled"
+    (click)="handleClick()">
+    
+    <i *ngIf="icon" [class]="icon"></i>
+    <ng-content></ng-content>
+</button>
